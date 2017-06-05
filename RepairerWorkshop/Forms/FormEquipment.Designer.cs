@@ -28,9 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormEquipment));
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.dgv = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,19 +65,34 @@
             this.dgv.Size = new System.Drawing.Size(695, 278);
             this.dgv.TabIndex = 5;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(288, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(121, 24);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Обладнання";
+            // 
             // FormEquipment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(730, 401);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.dgv);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormEquipment";
-            this.Text = "FormEquipment";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Обладнання";
             this.Load += new System.EventHandler(this.FormEquipment_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -84,5 +101,6 @@
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.DataGridView dgv;
+        private System.Windows.Forms.Label label1;
     }
 }

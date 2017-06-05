@@ -26,10 +26,10 @@ namespace RepairerWorkshop.Forms
             if (User.Items.Count!=0)
             {
                 flag = true;
-                FormMain.user.ID = User.Items[1].ID;
-                FormMain.user.Login = User.Items[1].Login;
-                FormMain.user.Password = User.Items[1].Password;
-                MessageBox.Show("Добрий день,  " + User.Items[1].Login, "Авторизація пройшла успішно", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                FormMain.user.ID = User.Items.Values.Last().ID;
+                FormMain.user.Login = User.Items.Values.Last().Login;
+                FormMain.user.Password = User.Items.Values.Last().Password;
+                MessageBox.Show("Добрий день,  " + FormMain.user.Login, "Авторизація пройшла успішно", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Close();
             }
             else

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.itemDictionary = new System.Windows.Forms.ToolStripMenuItem();
             this.itemDictionaryEquipment = new System.Windows.Forms.ToolStripMenuItem();
@@ -54,6 +54,10 @@
             this.itemOrderTest = new System.Windows.Forms.ToolStripMenuItem();
             this.itemOrderClose = new System.Windows.Forms.ToolStripMenuItem();
             this.itemAddRepairItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.статистикаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.itemStatisticDepartment = new System.Windows.Forms.ToolStripMenuItem();
+            this.itemStatisticDepType = new System.Windows.Forms.ToolStripMenuItem();
+            this.itemStatisticEmp = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrderOpen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrderRepair)).BeginInit();
@@ -66,6 +70,7 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.itemDictionary,
             this.itemOrder,
+            this.статистикаToolStripMenuItem,
             this.itemProfile,
             this.проПрограмуToolStripMenuItem,
             this.itemExit});
@@ -89,6 +94,7 @@
             // 
             // itemDictionaryEquipment
             // 
+            this.itemDictionaryEquipment.Image = ((System.Drawing.Image)(resources.GetObject("itemDictionaryEquipment.Image")));
             this.itemDictionaryEquipment.Name = "itemDictionaryEquipment";
             this.itemDictionaryEquipment.Size = new System.Drawing.Size(191, 22);
             this.itemDictionaryEquipment.Text = "Обладнання";
@@ -96,6 +102,7 @@
             // 
             // itemDictionaryDepartment
             // 
+            this.itemDictionaryDepartment.Image = ((System.Drawing.Image)(resources.GetObject("itemDictionaryDepartment.Image")));
             this.itemDictionaryDepartment.Name = "itemDictionaryDepartment";
             this.itemDictionaryDepartment.Size = new System.Drawing.Size(191, 22);
             this.itemDictionaryDepartment.Text = "Підрозділи";
@@ -103,12 +110,15 @@
             // 
             // itemDictionaryEmployee
             // 
+            this.itemDictionaryEmployee.Image = ((System.Drawing.Image)(resources.GetObject("itemDictionaryEmployee.Image")));
             this.itemDictionaryEmployee.Name = "itemDictionaryEmployee";
             this.itemDictionaryEmployee.Size = new System.Drawing.Size(191, 22);
             this.itemDictionaryEmployee.Text = "Працівники";
+            this.itemDictionaryEmployee.Click += new System.EventHandler(this.itemDictionaryEmployee_Click);
             // 
             // itemDictionaryRepairerItem
             // 
+            this.itemDictionaryRepairerItem.Image = ((System.Drawing.Image)(resources.GetObject("itemDictionaryRepairerItem.Image")));
             this.itemDictionaryRepairerItem.Name = "itemDictionaryRepairerItem";
             this.itemDictionaryRepairerItem.Size = new System.Drawing.Size(191, 22);
             this.itemDictionaryRepairerItem.Text = "Ремонтні запчастини";
@@ -120,9 +130,9 @@
             this.itemOrderView,
             this.itemOrderAdd,
             this.itemOrderRepair,
+            this.itemAddRepairItem,
             this.itemOrderTest,
-            this.itemOrderClose,
-            this.itemAddRepairItem});
+            this.itemOrderClose});
             this.itemOrder.Image = ((System.Drawing.Image)(resources.GetObject("itemOrder.Image")));
             this.itemOrder.Name = "itemOrder";
             this.itemOrder.Size = new System.Drawing.Size(103, 20);
@@ -184,14 +194,14 @@
             this.dgvOrderOpen.AllowUserToResizeRows = false;
             this.dgvOrderOpen.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvOrderOpen.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvOrderOpen.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvOrderOpen.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvOrderOpen.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvOrderOpen.Location = new System.Drawing.Point(35, 84);
             this.dgvOrderOpen.Name = "dgvOrderOpen";
@@ -312,10 +322,46 @@
             // 
             // itemAddRepairItem
             // 
+            this.itemAddRepairItem.Image = ((System.Drawing.Image)(resources.GetObject("itemAddRepairItem.Image")));
             this.itemAddRepairItem.Name = "itemAddRepairItem";
             this.itemAddRepairItem.Size = new System.Drawing.Size(152, 22);
             this.itemAddRepairItem.Text = "Додати деталь";
             this.itemAddRepairItem.Click += new System.EventHandler(this.itemAddRepairItem_Click);
+            // 
+            // статистикаToolStripMenuItem
+            // 
+            this.статистикаToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.itemStatisticDepartment,
+            this.itemStatisticDepType,
+            this.itemStatisticEmp});
+            this.статистикаToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("статистикаToolStripMenuItem.Image")));
+            this.статистикаToolStripMenuItem.Name = "статистикаToolStripMenuItem";
+            this.статистикаToolStripMenuItem.Size = new System.Drawing.Size(96, 20);
+            this.статистикаToolStripMenuItem.Text = "Статистика";
+            // 
+            // itemStatisticDepartment
+            // 
+            this.itemStatisticDepartment.Image = ((System.Drawing.Image)(resources.GetObject("itemStatisticDepartment.Image")));
+            this.itemStatisticDepartment.Name = "itemStatisticDepartment";
+            this.itemStatisticDepartment.Size = new System.Drawing.Size(285, 22);
+            this.itemStatisticDepartment.Text = "Звіт по підрозділах";
+            this.itemStatisticDepartment.Click += new System.EventHandler(this.itemStatisticDepartment_Click);
+            // 
+            // itemStatisticDepType
+            // 
+            this.itemStatisticDepType.Image = ((System.Drawing.Image)(resources.GetObject("itemStatisticDepType.Image")));
+            this.itemStatisticDepType.Name = "itemStatisticDepType";
+            this.itemStatisticDepType.Size = new System.Drawing.Size(285, 22);
+            this.itemStatisticDepType.Text = "Звіт по підрозділах і типах обладнання";
+            this.itemStatisticDepType.Click += new System.EventHandler(this.itemStatisticDepType_Click);
+            // 
+            // itemStatisticEmp
+            // 
+            this.itemStatisticEmp.Image = ((System.Drawing.Image)(resources.GetObject("itemStatisticEmp.Image")));
+            this.itemStatisticEmp.Name = "itemStatisticEmp";
+            this.itemStatisticEmp.Size = new System.Drawing.Size(285, 22);
+            this.itemStatisticEmp.Text = "Звіт по співробітниках";
+            this.itemStatisticEmp.Click += new System.EventHandler(this.itemStatisticEmp_Click);
             // 
             // FormMain
             // 
@@ -332,9 +378,11 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvOrderOpen);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FormMain";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "АІС \"Ремонт устаткування\"";
             this.Activated += new System.EventHandler(this.FormMain_Activated);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormMain_FormClosing);
@@ -376,5 +424,9 @@
         private System.Windows.Forms.ToolStripMenuItem itemOrderTest;
         private System.Windows.Forms.ToolStripMenuItem itemOrderClose;
         private System.Windows.Forms.ToolStripMenuItem itemAddRepairItem;
+        private System.Windows.Forms.ToolStripMenuItem статистикаToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem itemStatisticDepartment;
+        private System.Windows.Forms.ToolStripMenuItem itemStatisticDepType;
+        private System.Windows.Forms.ToolStripMenuItem itemStatisticEmp;
     }
 }

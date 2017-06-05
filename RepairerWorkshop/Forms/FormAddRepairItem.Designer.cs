@@ -139,8 +139,10 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cbOrder);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormAddRepairItem";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Додати деталь";
             this.Load += new System.EventHandler(this.FormAddRepairItem_Load);
             this.ResumeLayout(false);

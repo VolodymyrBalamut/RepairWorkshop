@@ -58,6 +58,12 @@
     <Compile Include="Forms\FormAddRepairItem.Designer.cs">
       <DependentUpon>FormAddRepairItem.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FormEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormEmployee.Designer.cs">
+      <DependentUpon>FormEmployee.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FormOrderAdd.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,6 +136,24 @@
     <Compile Include="Forms\FormRepairItem.Designer.cs">
       <DependentUpon>FormRepairItem.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FormStatDepType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormStatDepType.Designer.cs">
+      <DependentUpon>FormStatDepType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormStatEmp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormStatEmp.Designer.cs">
+      <DependentUpon>FormStatEmp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormStatisticDepartment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormStatisticDepartment.Designer.cs">
+      <DependentUpon>FormStatisticDepartment.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model\Base.cs" />
     <Compile Include="Model\Department.cs" />
     <Compile Include="Model\Employee.cs" />
@@ -146,6 +170,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\FormAddRepairItem.resx">
       <DependentUpon>FormAddRepairItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormEmployee.resx">
+      <DependentUpon>FormEmployee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormOrderAdd.resx">
       <DependentUpon>FormOrderAdd.cs</DependentUpon>
@@ -182,6 +209,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormRepairItem.resx">
       <DependentUpon>FormRepairItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormStatDepType.resx">
+      <DependentUpon>FormStatDepType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormStatEmp.resx">
+      <DependentUpon>FormStatEmp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormStatisticDepartment.resx">
+      <DependentUpon>FormStatisticDepartment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

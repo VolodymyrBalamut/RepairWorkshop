@@ -134,8 +134,10 @@
             this.Controls.Add(this.dgvHistory);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.dgv);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormOrderView";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Перегляд замовлень";
             this.Load += new System.EventHandler(this.FormOrderView_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dbRepairerWorkshopDataSet1)).EndInit();

@@ -38,25 +38,27 @@ namespace RepairerWorkshop
         {
             if (User.Items.Count != 0)
             {
-                if (User.Items[1].UserRole == "Stkeeper")
+                if (User.Items.Values.Last().UserRole == "Stkeeper")
                 {
                     itemDictionary.Enabled = false;
                     itemOrderRepair.Enabled = false;
                     itemOrderTest.Enabled = false;
+                    itemAddRepairItem.Enabled = false;
                 }
-                if (User.Items[1].UserRole == "Repairer")
+                if (User.Items.Values.Last().UserRole == "Repairer")
                 {
                     itemDictionary.Enabled = false;
                     itemOrderAdd.Enabled = false;
                     itemOrderClose.Enabled = false;
                     itemOrderTest.Enabled = false;
                 }
-                if (User.Items[1].UserRole == "Tester")
+                if (User.Items.Values.Last().UserRole == "Tester")
                 {
                     itemDictionary.Enabled = false;
                     itemOrderAdd.Enabled = false;
                     itemOrderClose.Enabled = false;
                     itemOrderRepair.Enabled = false;
+                    itemAddRepairItem.Enabled = false;
                 }
             }
             
@@ -186,6 +188,30 @@ namespace RepairerWorkshop
         private void itemProfile_Click(object sender, EventArgs e)
         {
             Form form = new FormProfile();
+            form.ShowDialog();
+        }
+
+        private void itemDictionaryEmployee_Click(object sender, EventArgs e)
+        {
+            Form form = new FormEmployee();
+            form.ShowDialog();
+        }
+
+        private void itemStatisticDepartment_Click(object sender, EventArgs e)
+        {
+            Form form = new FormStatisticDepartment();
+            form.ShowDialog();
+        }
+
+        private void itemStatisticDepType_Click(object sender, EventArgs e)
+        {
+            Form form = new FormStatDepType();
+            form.ShowDialog();
+        }
+
+        private void itemStatisticEmp_Click(object sender, EventArgs e)
+        {
+            Form form = new FormStatEmp();
             form.ShowDialog();
         }
     }

@@ -95,6 +95,7 @@
             this.Controls.Add(this.cbOrder);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormOrderClose";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

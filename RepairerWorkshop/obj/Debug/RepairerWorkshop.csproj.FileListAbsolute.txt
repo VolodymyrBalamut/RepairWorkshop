@@ -18,3 +18,8 @@ D:\Iт-52\4_semestr\ООП_2\лаб6\RepairerWorkshop\RepairerWorkshop\obj\Debug
 D:\Iт-52\4_semestr\ООП_2\лаб6\RepairerWorkshop\RepairerWorkshop\obj\Debug\RepairerWorkshop.pdb
 D:\Iт-52\4_semestr\ООП_2\лаб6\RepairerWorkshop\RepairerWorkshop\obj\Debug\RepairerWorkshop.Forms.FormAddRepairItem.resources
 D:\Iт-52\4_semestr\ООП_2\лаб6\RepairerWorkshop\RepairerWorkshop\obj\Debug\RepairerWorkshop.Forms.FormProfile.resources
+D:\Iт-52\4_semestr\ООП_2\лаб6\RepairerWorkshop\RepairerWorkshop\obj\Debug\RepairerWorkshop.csprojResolveAssemblyReference.cache
+D:\Iт-52\4_semestr\ООП_2\лаб6\RepairerWorkshop\RepairerWorkshop\obj\Debug\RepairerWorkshop.Forms.FormEmployee.resources
+D:\Iт-52\4_semestr\ООП_2\лаб6\RepairerWorkshop\RepairerWorkshop\obj\Debug\RepairerWorkshop.Forms.FormStatisticDepartment.resources
+D:\Iт-52\4_semestr\ООП_2\лаб6\RepairerWorkshop\RepairerWorkshop\obj\Debug\RepairerWorkshop.Forms.FormStatDepType.resources
+D:\Iт-52\4_semestr\ООП_2\лаб6\RepairerWorkshop\RepairerWorkshop\obj\Debug\RepairerWorkshop.Forms.FormStatEmp.resources
